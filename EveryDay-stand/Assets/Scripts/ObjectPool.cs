@@ -1,18 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ObjectPool : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject prefab;
+    private List<GameObject> pool = new List<GameObject>();
+    public int poolSize = 300;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    //public GameObject Get()
+    //{
+    //    // 꺼져있는 게임오브젝트를 찾아 active한 상태로 변경하고 return 한다.
+    //}
+    
+
+    public void Release(GameObject obj)
     {
-        
+        // 게임오브젝트를 deactive한다.
     }
 }
